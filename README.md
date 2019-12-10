@@ -32,3 +32,12 @@ NoMatchParen(or other way to disable parentheses highlighting) is also recommend
 					\ let b:auto_save = 1 |
 					\ NoMatchParen
 	augroup END
+
+
+You can place the skeleton file from this repo in your templates directory and add this line to `.vimrc` to automatically pre-fill new todofiles:
+
+	if has("autocmd")
+		augroup templates
+			autocmd BufNewFile *._todofile 0r templates/skeleton.todofile
+		augroup END
+	endif
