@@ -2,6 +2,8 @@
 
 A vim plugin that implements todofiles.
 
+![screenshot](https://raw.githubusercontent.com/SabbathHex/vim-todofile/master/sample.png)
+
 ## Features
 
 This plugin provides a way to create 3-section file with parts for items that are to be done (# TODO), to be followed-up (# FOLLOWUP) and items that were done already (# DONE).
