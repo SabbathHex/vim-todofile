@@ -41,3 +41,12 @@ You can place the skeleton file from this repo in your templates directory and a
 			autocmd BufNewFile *._todofile 0r templates/skeleton.todofile
 		augroup END
 	endif
+
+### Contrib/ directory
+
+These two scripts may be used to integrate with [i3blocks](https://github.com/vivien/i3blocks):
+
+* `contrib/todo_next`: example of a script that shows the topmost task in # TODO section.
+* `contrib/todo_total`: example of a script that counts the tasks in # TODO section.
+
+Both scripts rely on a systemd target to distinguish between work and home location, that check is optional and may be trivially removed.
