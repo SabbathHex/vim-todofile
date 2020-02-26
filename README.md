@@ -54,4 +54,4 @@ Both scripts rely on a systemd target to distinguish between work and home locat
 `contrib/statusbar-integration` also has a sample config for i3blocks that also allows refreshing the bar by sending it a signal. The script `contrib/statusbar-integration/monitor-todofiles.sh` implements a sample mechanism that watches changes in the specified directory and issues the signals to i3blocks.
 
 * `contrib/tmux-todo`: starts the vim session and the monitor in tmux windows.
-* `contrib/additional-mappings.vim`: optional mapping of `nd` (new-day): adds mapping that creates a date line at DONE section, moves back to TODO section and creates "Follow-up on stuff" item
+* `contrib/additional-mappings.vim`: optional mapping of `nd` (new-day): adds mapping that creates a date comment at DONE section, moves back to TODO section and creates "Follow-up on stuff" item
