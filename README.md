@@ -50,3 +50,5 @@ These two scripts may be used to integrate with [i3blocks](https://github.com/vi
 * `contrib/todo_total`: example of a script that counts the tasks in # TODO section.
 
 Both scripts rely on a systemd target to distinguish between work and home location, that check is optional and may be trivially removed.
+
+* `contrib/additional-mappings.vim`: optional mapping of `nd` (new-day): adds mapping that creates a date line at DONE section, moves back to TODO section and creates "Follow-up on stuff" item
