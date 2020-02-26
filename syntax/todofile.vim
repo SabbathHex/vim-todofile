@@ -2,10 +2,10 @@ if exists("b:current_syntax")
         finish
 endif
 let b:current_syntax = "todofile"
+syn match lineComment "#.*$"
 syn match sectionNameTODO "^# TODO"
 syn match sectionNameDONE "^# DONE"
 syn match sectionNameFOLLOWUP "^# FOLLOWUP"
-syn match lineComment "\(^\)\@<!#.*$"
 syn match lineTag "^\[.\{-}\]"
 syn match completeTagLine "^#TAGS.*"
 syn match importantTaskWithoutTag "^[^\[].*(!)"
