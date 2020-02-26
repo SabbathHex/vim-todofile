@@ -1,0 +1,10 @@
+command=~/.local/bin/statusbar/$BLOCK_NAME
+
+[todo_next]
+interval=5
+signal=11
+
+[todo_total]
+interval=5
+signal=12
+

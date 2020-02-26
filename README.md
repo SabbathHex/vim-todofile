@@ -46,9 +46,11 @@ You can place the skeleton file from this repo in your templates directory and a
 
 These two scripts may be used to integrate with [i3blocks](https://github.com/vivien/i3blocks):
 
-* `contrib/todo_next`: example of a script that shows the topmost task in # TODO section.
-* `contrib/todo_total`: example of a script that counts the tasks in # TODO section.
+* `contrib/statusbar-integration/todo_next`: example of a script that shows the topmost task in # TODO section.
+* `contrib/statusbar-integration/todo_total`: example of a script that counts the tasks in # TODO section.
 
-Both scripts rely on a systemd target to distinguish between work and home location, that check is optional and may be trivially removed.
+Both scripts rely on a systemd target to distinguish between work and home location, that check is optional and may be removed.
+
+`contrib/statusbar-integration` also has a sample config for i3blocks that also allows refreshing the bar by sending it a signal. the script `contrib/statusbar-integration/monitor-todofiles.sh` implements a sample mechanism that watches changes in the specified directory and issues the signals to i3blocks.
 
 * `contrib/additional-mappings.vim`: optional mapping of `nd` (new-day): adds mapping that creates a date line at DONE section, moves back to TODO section and creates "Follow-up on stuff" item
