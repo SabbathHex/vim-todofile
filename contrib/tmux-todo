@@ -1,0 +1,10 @@
+#!/bin/sh
+
+SESSIONNAME="todo"
+if ! tmux has-session -t $SESSIONNAME >/dev/null 2>&1;
+then
+    cd "$HOME" || return
+    tmux new-session -d -s $SESSIONNAME -n todo "nvim -S ${HOME}/Documents/todofiles/Session.vim"
+    tmux new-window -d -n monitor "${HOME}/.local/bin/statusbar/monitor-todofiles"
+fi
+tmux attach -t $SESSIONNAME

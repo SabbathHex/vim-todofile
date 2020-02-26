@@ -23,11 +23,11 @@ Use your vim plugin manager to install `SabbathHex/vim-todofile`.
 
 ## Optional stuff
 
-Using [auto-save](https://github.com/907th/vim-auto-save) in conjunction with vim session mechanism allows to turn this plugin into a todo application
+Using [auto-save](https://github.com/907th/vim-auto-save) in conjunction with vim session mechanism allows to turn this plugin into a todo application. There is an example in `contrib` folder of integrating this into tmux.
 
 NoMatchParen(or other way to disable parentheses highlighting) is also recommended.
 
-	augroup _todofile_vimrc
+	augroup todofile_vimrc
 		autocmd FileType todofile
 					\ let b:auto_save = 1 |
 					\ NoMatchParen
@@ -38,7 +38,7 @@ You can place the skeleton file from this repo in your templates directory and a
 
 	if has("autocmd")
 		augroup templates
-			autocmd BufNewFile *._todofile 0r templates/skeleton.todofile
+			autocmd BufNewFile *.todofile 0r templates/skeleton.todofile
 		augroup END
 	endif
 
@@ -51,6 +51,7 @@ These two scripts may be used to integrate with [i3blocks](https://github.com/vi
 
 Both scripts rely on a systemd target to distinguish between work and home location, that check is optional and may be removed.
 
-`contrib/statusbar-integration` also has a sample config for i3blocks that also allows refreshing the bar by sending it a signal. the script `contrib/statusbar-integration/monitor-todofiles.sh` implements a sample mechanism that watches changes in the specified directory and issues the signals to i3blocks.
+`contrib/statusbar-integration` also has a sample config for i3blocks that also allows refreshing the bar by sending it a signal. The script `contrib/statusbar-integration/monitor-todofiles.sh` implements a sample mechanism that watches changes in the specified directory and issues the signals to i3blocks.
 
+* `contrib/tmux-todo`: starts the vim session and the monitor in tmux windows.
 * `contrib/additional-mappings.vim`: optional mapping of `nd` (new-day): adds mapping that creates a date line at DONE section, moves back to TODO section and creates "Follow-up on stuff" item
