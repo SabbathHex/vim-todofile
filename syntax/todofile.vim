@@ -8,7 +8,8 @@ syn match sectionNameFOLLOWUP "^# FOLLOWUP"
 syn match lineComment "\(^\)\@<!#.*$"
 syn match lineTag "^\[.\{-}\]"
 syn match completeTagLine "^#TAGS.*"
-syn match importantTask "\(] \)\@<=.*(!)"
+syn match importantTaskWithoutTag "^[^\[].*(!)"
+syn match importantTaskWithTag "\(]\)\@<=\( \)\?\zs.*(!)\ze"
 
 hi def lineComment ctermfg=67.cterm256 cterm=bold
 hi def link completeTagLine Constant
@@ -16,4 +17,5 @@ hi def sectionNameDONE ctermbg=Green ctermfg=Black
 hi def sectionNameTODO ctermbg=LightMagenta ctermfg=Black
 hi def sectionNameFOLLOWUP ctermbg=Yellow ctermfg=Black
 hi def lineTag ctermfg=191.cterm256 cterm=bold
-hi def importantTask ctermfg=Black ctermbg=Red
+hi def importantTaskWithoutTag ctermfg=Black ctermbg=Red
+hi def importantTaskWithTag ctermfg=Black ctermbg=Red
